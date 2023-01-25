@@ -1,6 +1,7 @@
 process.env.NODE_ENV !== 'production' ? require("dotenv").config({ path: ".env" }) : null;
 const { Telegraf, Markup } = require('telegraf');
 const productModel = require("./models/productModel");
+const savatModel = require("./models/savatModel");
 const userModel = require("./models/userModel");
 const { fnc } = require("./Others/cfg");
 const cfg = require("./Others/cfg");
@@ -51,6 +52,7 @@ bot.on('text', async msg => {
         if (user.ban) {
             sm(messages.ban, Markup.removeKeyboard())
         } else {
+
             if (tx === "🔙Ortga" || tx === "🔙Назад") {
                 if (user.admin) {
                     fnc.setStep(id, { step: "none" })
@@ -82,6 +84,13 @@ bot.on('text', async msg => {
             } else if (tx === '📞Aloqa' || tx === '📞Контакты') {
 
             } else if (tx === '👤Profil' || tx === '👤Профиль') {
+
+            }else if (tx === '📊Statistika' || tx === '📊Statistika') {
+                let products = await savatModel.find()
+                let productBtns =[]
+                for(var product of products){
+                    productBtns.push({text: product.name, callback_data:"product__"+product.to})
+                }
 
             } else if (tx === '📚Bot haqida' || tx === "📚О боте") {
 
@@ -178,6 +187,11 @@ bot.on("callback_query", (msg) => {
           keyboard.back
         );
       });
+    } if(data.includes("product__")){
+        const toID = data.split("__")[1];
+        savatModel.findOne({id:toID}).then(res => {
+            sm(`Mahsulot nomi: ${res.name}\nMahsulot narxi: ${res.price}sum\nSotib olingan soni: ${res.number}\nUmumiy summa: ${res.number}*${res.price}sum`,keyboard.back)
+        })
     }
   });
 
