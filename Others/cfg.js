@@ -5,7 +5,7 @@ module.exports = {
     keyboard: {
         uz: {
             main: Markup.keyboard([
-                ["📦Barcha mahsulotlar", "📞Aloqa"], ["👤Profil", "📚Bot haqida"]
+                ["📦Barcha mahsulotlar", "📞Aloqa"], ["👤Profil", "📊Statistika"],["📚Bot haqida"]
             ]).resize(true),
             back: Markup.keyboard([
                 ["🔙Ortga"]
@@ -29,6 +29,7 @@ module.exports = {
             upcont: "✅Raqamingiz qalub qilindi!",
             ban: "💥 Siz admin tomonidan qora ro'yxatga tushirildingiz 🤕",
             admin_main: "👨‍⚖️Admin Panelga hush kelibsiz❗",
+            
             err_admin: "❌Siz admin emassiz!",
             product_title: "📦Mahsulot sarlavhasini kiriting\n📋Masalan: <b>Iphone XS Max</b>",
             product_about: "📦Mahsulot haqida kiriting\n📋Masalan: <b>Iphone XS Max gray. Ozu 8gb, xotirasi 224gb...</b>",
