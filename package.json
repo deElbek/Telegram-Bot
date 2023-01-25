@@ -4,7 +4,7 @@
     "nodemon": "^2.0.20"
   },
   "name": "bots",
-  "description": "��#\u0000 \u0000B\u0000o\u0000t\u0000t\u0000\r\u0000 \u0000",
+  "description": "Mern Stack group",
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
