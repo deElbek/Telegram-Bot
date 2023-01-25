@@ -11,7 +11,7 @@ module.exports = {
                 ["🔙Ortga"]
             ]).resize(true),
             admin_main: Markup.keyboard([
-                ["📦Mahsulot joylash"]
+                ["📦Mahsulot joylash", '👥Foydalanuvchilar']
             ]).resize(true),
             contact: Markup.keyboard([
                 [Markup.button.contactRequest("☎️Raqamni yuborish")]
@@ -27,13 +27,15 @@ module.exports = {
             home: "🏘Bosh sahifa",
             contact: "📨Bo'tdan to'liq foydalanish uchun ☎️Raqamni yuborish tugmasini bosing!",
             upcont: "✅Raqamingiz qalub qilindi!",
-            ban: "❗Siz <b>BAN</b> olgansiz!",
-            admin_main: "👤Admin Panel",
+            ban: "💥 Siz admin tomonidan qora ro'yxatga tushirildingiz 🤕",
+            admin_main: "👨‍⚖️Admin Panelga hush kelibsiz❗",
             err_admin: "❌Siz admin emassiz!",
-            product_title: "📦Mahsulto sarlavhasini kiriting\n📋Masalan: <b>Iphone XS Max</b>",
-            product_about: "📦Mahsulto haqida kiriting\n📋Masalan: <b>Iphone XS Max gray. Ozu 8gb, xotirasi 224gb...</b>",
-            product_price: "📦Mahsulto narxini kiriting\n📋Masalan: <b>5 000 000</b>\n\n<b>⭕️Eslatma:</b><i> Narx faqat so'mda kiritiladi!</i>",
-            product_image: "📦Mahsulto rasm ni kiriting\n<b>⭕️Eslatma:</b><i>Faqat bir dona rasm yuklash mumkin!</i>"
+            product_title: "📦Mahsulot sarlavhasini kiriting\n📋Masalan: <b>Iphone XS Max</b>",
+            product_about: "📦Mahsulot haqida kiriting\n📋Masalan: <b>Iphone XS Max gray. Ozu 8gb, xotirasi 224gb...</b>",
+            product_price: "📦Mahsulot narxini kiriting\n📋Masalan: <b>5 000 000</b>\n\n<b>⭕️Eslatma:</b><i> Narx faqat so'mda kiritiladi!</i>",
+            product_image: "📦Mahsulot rasmni kiriting\n<b>⭕️Eslatma:</b><i>Faqat bir dona rasm yuklash mumkin!</i>",
+            blocked:"<b>Siz admin tomonidan blockdan olindingiz!</b>\nEndi botdan foydalanishingiz mumkin!",
+            freedom: "<b>Siz admin tomonidan blocklandingiz!</b>\nEndi botdan foydalana olmaysiz!"
         },
         ru: {
 

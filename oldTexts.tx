@@ -158,7 +158,7 @@ bot.on("callback_query", (msg) => {
       userModel.findOne({ id: userID }).then((data) => {
         sm(
           `👤Ismi: ${data.name}\n📞Asosiy Tel: ${data.phone}\n📞Qo'shimcha Tel: ${data.phone2}\n`,
-          Markup.inlineKeyboard(x
+          Markup.inlineKeyboard(
               [{text: "Qaytish", callback_data: "back"}]
           )
         );
